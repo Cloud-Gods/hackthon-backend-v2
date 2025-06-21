@@ -1,0 +1,16 @@
+# The following files and directories should be ignored by Docker when building the image
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+*.db
+*.sqlite3
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.egg-info/
+dist/
+build/
