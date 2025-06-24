@@ -5,3 +5,4 @@ seaborn
 uvicorn
 pydantic
 boto3
+pydantic-settings
