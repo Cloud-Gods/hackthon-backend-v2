@@ -6,3 +6,4 @@ uvicorn
 pydantic
 boto3
 pydantic-settings
+httpx
