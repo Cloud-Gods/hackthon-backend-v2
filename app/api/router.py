@@ -1,10 +1,10 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import procesos
+from app.api.v1.endpoints import procesos , resumenes, actuaciones
 
 router = APIRouter()
 router.include_router(procesos.router, prefix="/procesos", tags=["procesos"])
-
-
+router.include_router(resumenes.router, prefix="/resumenes", tags=["resumenes"])
+router.include_router(actuaciones.router, prefix="/actuaciones", tags=["actuaciones"])
 
 @router.get("/version") 
 def show_version():
@@ -35,5 +35,18 @@ def docs():
          }, {
               "traer": "Muestra la versión de la API",
               "endpoint": "/version",
-         }
+         },
+          {
+                "traer": "Resumen por llave de proceso",
+                "endpoint": "/resumenes/resumen/llave/{llave}",
+          }, 
+           
+          {
+               "traer": "Resumen por sujeto procesal",
+               "endpoint": "/resumenes/resumen/sujeto/{palabra_clave}",
+          }, 
+          {
+               "traer": "Actuaciones por ID de proceso",
+               "endpoint": "/actuaciones/actuaciones/{id_proceso}",
+          }
     ]}
