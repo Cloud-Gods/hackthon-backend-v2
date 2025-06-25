@@ -55,7 +55,7 @@ def resumen_por_sujeto(palabra_clave):
     total_casos = len(filtrado)
     por_despacho = filtrado['despacho'].value_counts().rename_axis('Despacho').reset_index(name='Cantidad')
     por_departamento = filtrado['departamento'].value_counts().rename_axis('Departamento').reset_index(name='Cantidad')
-    casos_recientes = filtrado.sort_values('fechaUltimaActuacion', ascending=False).head(5)[
+    casos_recientes = filtrado.sort_values('fechaUltimaActuacion', ascending=False).head(20)[
         ['llaveProceso', 'fechaUltimaActuacion', 'despacho', 'departamento']
     ]
 
