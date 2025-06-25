@@ -19,34 +19,9 @@ def root():
 @router.get("/docs")
 def docs():
     return {"message": [
-       {
-           "traer": "Trae todos los procesos",
-           "endpoint": "/procesos/",
-       }
-         , {
-              "traer": "Trae procesos por nombre",
-              "endpoint": "/procesos/by_nombre/{nombre}",
-         }, {
-              "traer": "Trae procesos por llave de proceso",
-              "endpoint": "/procesos/by_llaveProceso/{llaveProceso}",
-         }, {
-              "traer": "Trae un proceso por ID",
-              "endpoint": "/procesos/id_proceso/{id_proceso}",
-         }, {
-              "traer": "Muestra la versión de la API",
-              "endpoint": "/version",
-         },
-          {
-                "traer": "Resumen por llave de proceso",
-                "endpoint": "/resumenes/resumen/llave/{llave}",
-          }, 
-           
-          {
-               "traer": "Resumen por sujeto procesal",
-               "endpoint": "/resumenes/resumen/sujeto/{palabra_clave}",
-          }, 
-          {
-               "traer": "Actuaciones por ID de proceso",
-               "endpoint": "/actuaciones/actuaciones/{id_proceso}",
-          }
+          {"url": "/procesos", "description": "Endpoints relacionados con procesos"},
+          {"url": "/resumenes", "description": "Endpoints relacionados con resúmenes de procesos"},
+          {"url": "/actuaciones", "description": "Endpoints relacionados con actuaciones de procesos"},
+          {"url": "/version", "description": "Obtener la versión de la API"},
+     
     ]}
