@@ -1,4 +1,4 @@
-FastAPI
+fastapi
 pandas
 matplotlib
 seaborn
@@ -7,3 +7,4 @@ pydantic
 boto3
 pydantic-settings
 httpx
+openai
