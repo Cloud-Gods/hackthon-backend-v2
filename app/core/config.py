@@ -5,8 +5,9 @@ class Settings(BaseSettings):
     aws_secret_access_key: str
     aws_region: str
     dynamodb_table_procesos: str
+    open_api_key: str
 
     class Config:
         env_file = ".env"
 
-settings = Settings()
+settings = Settings() # type: ignore
